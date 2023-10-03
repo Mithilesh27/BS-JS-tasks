@@ -1,0 +1,32 @@
+.outer_box{
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: rgb(245, 243, 243);
+    height: 670px;
+    width: 700px;
+}
+.first_name{
+    
+    width:600px;
+}
+.last_name{
+    width: 600px;
+}
+.tp{
+    position: relative;
+    left: 150px;
+    top: -50px;
+}
+.tp1{
+    position: relative;
+    width: 600px;
+    height: 80px;
+}
+.btn{
+    position: relative;
+    left: 43%;
+}
+label{
+    font-weight: bold;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainform{
+            margin: auto;
+        }
+        #Multiply{
+            border-radius: 5px;
+            width:80px;
+            height:30px;
+            cursor: pointer;
+            transition: border-color 0.5s;
+        }
+        #Multiply:hover{
+            border-color: skyblue;
+        }
+        #Divide{
+            border-radius: 5px;
+            width:80px;
+            height: 30px;
+            cursor: pointer;
+            transition: border-color 0.5s;
+        }
+        #Divide:hover{
+            border-color: skyblue;
+        }
+        input[type="number"]{
+            padding:5px;
+            margin:5px;
+        }
+        #ResultText{
+            opacity: 0;
+        }
+        #Result{
+            opacity: 0;
+        }
+        #number1Text{
+            opacity:0;
+            color: red;
+        }
+        #number2Text{
+            opacity: 0;
+            color:red;
+        }
+   </style>
+</head>
+<body>
+        
+          <form>
+            <label for="">1st Number :</label>
+            <span><input type="number" id="1">  <p id="number1Text">Please Enter the First Number</p></span>
+            <label for="">2nd Number :</label>
+            <span><input type="number" id="2">  <p id="number2Text">Please Enter the Second Number</p></span>
+            <div><button id="Multiply">Multiply</button>
+            <button id="Divide">Divide</button></div>
+          </form><br>
+          <p id="ResultText">The Result Is :</p>
+          <p id="Result">Result</p>
+        <script>
+             let first=document.getElementById('1');
+             let second=document.getElementById('2');
+             let multiply=document.getElementById('Multiply');
+             let divide = document.getElementById('Divide');
+             Multiply.addEventListener('click',(event)=>{
+                event.preventDefault();
+                let number1=parseFloat(first.value);
+                let number2=parseFloat(second.value);
+                if(!first.value||!second.value){
+                if(!first.value){
+                    document.getElementById('number1Text').style.opacity=1;
+                }
+                if(!second.value){
+                    document.getElementById('number2Text').style.opacity=1;
+                }
+                }
+                else{
+                    document.getElementById('number2Text').style.opacity=0;
+                    let result=number1*number2;
+                    document.getElementById('ResultText').style.opacity=1;
+                    document.getElementById('Result').innerText=result;
+                    document.getElementById('Result').style.opacity=1;
+                }
+             })
+             Divide.addEventListener('click',(event)=>{
+                event.preventDefault();
+                let number1=parseFloat(first.value);
+                let number2=parseFloat(second.value);
+                if(!first.value||!second.value){
+                    if(!first.value){
+                    document.getElementById('number1Text').style.opacity=1;
+                    }
+                    if(!second.value){
+                    document.getElementById('number2Text').style.opacity=1;
+                    }
+                }
+                else{
+                    document.getElementById('number2Text').style.opacity=0;
+                    if(number2!=0){
+                    let result=number1/number2;
+                    document.getElementById('ResultText').style.opacity=1;
+                    document.getElementById('Result').textContent=result;
+                    document.getElementById('Result').style.opacity=1;
+                    }
+                    else{
+                        document.getElementById('ResultText').textContent="Cannot divide by zero";
+                        document.getElementById('ResultText').style.opacity=1;
+                    }
+                }
+             })
+        </script>
+</body>
+</html>

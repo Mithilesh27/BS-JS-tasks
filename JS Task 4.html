@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width:80px;
+            height:25px;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="date">show date</button>
+    <p id="dateResult"></p>
+    <button id="time">show Time</button>
+    <p id="timeResult"></p>
+    <script>
+        document.getElementById('date').addEventListener('click',()=>{
+            const currentDate= new Date();
+            const day=currentDate.getDate();
+            const month=currentDate.toLocaleString('default',{month:'long'});
+            const year=currentDate.getFullYear();
+            const formatDate=`${day}/${month}/${year}`;
+            document.getElementById('dateResult').innerText=formatDate;
+        })
+        document.getElementById('time').addEventListener('click',()=>{
+            const currentTime = new Date();
+           const day=currentTime.toLocaleString('en-US',{weekday:'short'});
+           const month=currentTime.toLocaleString('en-US',{month:'short'});
+           const date=currentTime.toLocaleString('en-US',{day:'2-digit'});
+           const year=currentTime.getFullYear();
+           const options={hour:'2-digit',minute:'2-digit',second:'2-digit'};
+           const timeParts=currentTime.toLocaleTimeString('en-US',options).split(':');
+           const hour=timeParts[0];
+           const minute=timeParts[1];
+           const second=timeParts[2];
+          document.getElementById('timeResult').innerText=day+" "+month+" "+date+" "+year+" "+hour+":"+minute+":"+second+" GMT+0530 (Indian Standard Time)";
+        })
+    </script>
+</body>
+</html>

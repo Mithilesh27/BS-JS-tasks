@@ -1,0 +1,85 @@
+
+.name{
+    font-weight:700;
+}
+.main{
+    margin:0 20%;
+    width:800px;
+    background-color:rgb(225, 155, 167);
+    padding:20px;
+}
+label{
+    margin-left:20px;
+    margin-right:2px;
+    margin-bottom: 5px;
+}
+input{
+    width:60%;
+    margin-left:5px;
+    margin-bottom: 15px;
+}
+h3{
+    margin:10px 30%;
+}
+.labelcontainer{
+    display: inline-block;
+    width:150px;
+    font-size: smaller;
+}
+
+.input-group {
+display: flex;
+align-items: center;
+justify-content: flex-start; /* Aligns the label to the left */
+}
+
+.radio-group {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.radio-group div {
+display: flex;
+align-items: center;
+margin-left:70px;
+}
+.checkbox-group {
+margin-left: 30px;
+width:40%;
+display:inline-flex;
+justify-content: space-evenly;
+}
+.checkbox-group2{
+margin-right:500px;
+width: 800px;
+height: 30px;
+display:flex;
+}
+.checkbox-group2 input{
+position: relative;
+right:200px;
+}
+.checkbox-group2 label{
+position: relative;
+width: 400px;;
+right:400px;
+}
+#login{
+width: fit-content;
+position:relative;
+left:400px;
+}
+#register{
+border: 1px solid black;
+border-radius: 15px;
+background-color: red;
+color: white;
+margin:0 40%;
+padding: 5px;
+width:100px;
+font-weight: bold;
+}
+span{
+color:red;
+}

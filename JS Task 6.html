@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width:400px;
+            margin: 0 auto;
+            background-color:beige;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 100px;
+            text-align: center;
+            box-shadow:0 0 0 beige;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width:200px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding-left: 30px; /* Add padding for icons */
+        }
+
+        .icon {
+            position:absolute;
+            margin-top: 20px; 
+            margin-left: 10px;/* Adjust vertical alignment of icons */
+
+        }
+
+        button {
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3897f0;
+        }
+        #nameerror{
+            color:red;
+        }
+        #pswd{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i>Instagram</i></h1>
+        <div class="input-container">
+            <i class="fas fa-user icon"></i><!-- Username icon -->
+            <input type="text" id="user" placeholder="Username">
+        </div>
+        <p id="nameerror"></p>
+        <div class="input-container">
+            <i class="fas fa-lock icon"></i> <!-- Password icon -->
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <p id="pswd"></p>
+        <button type="submit" id="login">Login</button>
+        <div class="options">
+            <label class="checkbox">
+                <input type="checkbox"> Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 20px;">Don't have an account! <a href="#">Sign up here</a>.</p>
+    <script>
+        let name=document.getElementById('user');
+        let password=document.getElementById('password');
+        let logbtn=document.getElementById('login');
+        logbtn.addEventListener('click',()=>{
+            if(name.value==""){
+                document.getElementById('nameerror').innerHTML="Enter Username";
+            }
+            else{
+                document.getElementById('nameerror').innerHTML="";
+            }
+            if(password.value==""){
+                document.getElementById('pswd').innerHTML="Enter Password";
+            }
+            else{
+                document.getElementById('pswd').innerHTML="";
+            }
+        })
+    </script>
+</body>
+</html>

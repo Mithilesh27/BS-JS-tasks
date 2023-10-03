@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Task 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for the navigation bar */
+        .navbar {
+            background-color: orange;
+            position:sticky;
+            top:0;
+            overflow: auto;
+        }
+        .nav-item{
+            width:250px;
+            /*background-color:black*/;
+        }
+        @media (max-width:768px){
+            .nav-item h4{
+                font-size: smaller;
+            }
+            .nav-item p{
+                font-size:small;
+            }
+        }
+        .second{
+            background-color: black;
+            width:75%;
+            height:65px;
+            margin: auto;
+        }
+        
+        .navbar-brand{
+            font-weight: bold;
+            font-size: 50px;
+            color:black;
+        }
+        .second a{
+            color:white;
+            transition:color 0.1s;
+        }
+        .second a:hover{
+            color: orange;
+        }
+        .seecond button{
+            color:white;
+            transition:color 0.1s;
+        }
+        .second button :hover{
+              color:orange;
+        }
+        .secondnav{
+            position:sticky;
+            top:80px;
+        }
+        main{
+            background-image: url("construction.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height:500px;
+            padding:13%;
+        }
+        @media(max-width:768px){
+            main{
+                background-image: url("construction2 small.jpg");
+                overflow-x: hidden;
+            }
+        }
+
+        .part1{
+            background-color: rgb(91, 26, 91);
+            color: yellow;
+            height:fit-content;
+            
+        }
+        .part2{
+            background-color:rgb(196, 196, 23);
+            color:black;
+            height:fit-content;
+        }
+        .part3{
+            background-color: rgb(91, 26, 91) ;
+            color:yellow;
+            height:fit-content;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand"href="#">Builderz</a>
+            
+            <!-- Sections with icons, headings, and text -->
+            <div class="nav-item d-flex justify-content-center align-items-center">
+                    <span class="me-2 me-sm-1"><i class="bi bi-calendar3"></i></span>
+                    <div><h4 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:50;">Opening hour</h4>
+                    <p class="nav-text">Mon-Fri, <span style="font-size:small;">8:00-9:00</span></p></div>
+            </div>
+            <div class="nav-item d-flex justify-content-center align-items-center">
+                <span class="me-2 me-sm-1"><i class="bi bi-telephone-fill"></i></span>
+                <div><h4 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:50;">Call Us</h4>
+                <p class="nav-text">+012 345 6789</p></div>
+            </div>   
+            <div class="nav-item d-flex justify-content-center align-items-center">
+                <span class="me-2 me-sm-1"><i class="bi bi-envelope-fill"></i></span>
+                <div><h4 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:50;">Email Us</h4>
+                <p class="nav-text">info@gmail.com</p></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main navigation bar -->
+    <nav class="navbar navbar-expand-lg secondnav">
+        <div class="container-fluid second">
+                        <a class="nav-link text-decoration-none" href="#">HOME</a>
+                        <a class="nav-link text-decoration-none" href="#">ABOUT</a>
+                        <a class="nav-link text-decoration-none" href="#">SERVICES</a>
+                        <a class="nav-link text-decoration-none" href="#">TEAM</a>
+                        <a class="nav-link text-decoration-none" href="#">PROJECT</a>
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PAGES
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="#">Page 1</a>
+                            <a class="dropdown-item" href="#">Page 2</a>
+                            <a class="dropdown-item" href="#">Page 3</a>
+                        </div>
+                        <a class="nav-link text-decoration-none" href="#">CONTACT</a>
+                <button class="btn btn-outline-light get-quote-button text-decoration-none">Get a Quote</button>
+        </div>
+    </nav>
+        <main>
+            <div class="mainpage">
+                <div class="text-center">
+                <h4 class="text-center text-light" style="font-weight: 50;">We Are Professional</h4>
+                <h1 class="text-center text-light" style="font-weight:500;">For Your Dream Project</h1><br>
+                <a href="#" class="text-decoration-none text-light" style="border: 1px solid white;padding:5px;">GET A QUOTE</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="row">
+               <!-- First Section -->
+               <div class="col-md-4 col-sm-4 text-center part1">
+                <div class="d-flex justify-content-center align-items-center">
+                     <span><img src="worker.png" alt="" class="img-fluid"></span>
+                     <div>
+                     <h4>Expert Worker</h4>
+                     <p>Lorem ipsum dolor, sit amet<br>consectetur adipisicing elit. Sapiente quia adipisci exercitationem pariatur animi debitis fuga corrupti placeat neque commodi.</p>
+                     </div>
+                </div>
+               </div>
+               <!-- Second Section -->
+                  <div class="col-md-4 col-sm-4 part2">
+                    <div class="d-flex justify-content-center align-items-center">
+                     <span><img src="buildings.png" alt="" class="img-fluid"></span>
+                     <div>
+                     <h4>Quality Work</h4>
+                     <p>Lorem ipsum dolor, sit amet<br>consectetur adipisicing elit. Sapiente quia adipisci exercitationem pariatur animi debitis fuga corrupti placeat neque commodi.</p>
+                     </div>
+                   </div>
+                  </div>
+         
+               <!-- Third Section -->
+                  <div class=" col-md-4 col-sm-4 part3">
+                    <div class="d-flex justify-content-center align-items-center">
+                     <span><img src="contact-us.png" alt="" class="img-fluid"></span>
+                     <div><h4>24/7 Support</h4>
+                     <p>Lorem ipsum dolor, sit amet<br>consectetur adipisicing elit. Sapiente quia adipisci exercitationem pariatur animi debitis fuga corrupti placeat neque commodi.</p></div>
+                    </div>
+                  </div>
+            </div>
+         </footer>
+         
+</body>
+</html>
